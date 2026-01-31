@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus do Vale | Advogado</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --black: #1a1a1a;
+            --gold: #c5a059;
+            --gold-light: #e0c08d;
+            --white: #ffffff;
+            --gray-bg: #f4f4f4;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Times New Roman', Times, serif; }
+        body { background-color: var(--white); color: var(--black); line-height: 1.6; }
+
+        /* HEADER */
+        header { padding: 30px 0; text-align: center; border-bottom: 1px solid var(--gold); background: var(--white); }
+        .logo-container img { max-width: 100px; margin-bottom: 10px; }
+        h1 { color: var(--black); text-transform: uppercase; letter-spacing: 4px; font-weight: 400; margin: 10px 0; }
+        
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 30px; padding: 20px 0; }
+        nav ul li a { text-decoration: none; color: var(--black); font-weight: bold; text-transform: uppercase; font-size: 13px; transition: 0.3s; letter-spacing: 1px; }
+        nav ul li a:hover { color: var(--gold); }
+
+        /* SECTION 1 - HERO */
+        .hero {
+            height: 75vh;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.3)), url('https://plus.unsplash.com/premium_photo-1698084059560-9a53de7b816b?q=80&w=2011&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 20px;
+        }
+        .hero h2 { font-size: 2.8rem; max-width: 900px; text-transform: uppercase; font-weight: 300; letter-spacing: 2px; }
+
+        /* 3 FILETTES DIVISORIOS */
+        .triple-divider { display: flex; flex-direction: column; gap: 3px; width: 100%; background: white; padding: 10px 0; }
+        .triple-divider span { height: 1px; background: var(--gold); width: 60%; margin: 0 auto; opacity: 0.6; }
+
+        /* SECTION 2 - MÓDULOS */
+        .modules { padding: 80px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .card { padding: 40px; border: 1px solid #ddd; text-align: center; transition: 0.4s; position: relative; }
+        .card:hover { border-color: var(--gold); background: var(--black); color: white; }
+        .card i { font-size: 35px; color: var(--gold); margin-bottom: 20px; }
+        .card h3 { text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
+
+        /* SECTION 3 - QUEM SOMOS */
+        .quem-somos { padding: 80px 10%; text-align: center; }
+        .profile-frame {
+            width: 220px; height: 220px; margin: 30px auto;
+            border-radius: 50%; padding: 8px;
+            border: 2px solid var(--gold); position: relative;
+        }
+        .profile-frame::after {
+            content: ''; position: absolute; top: -12px; left: -12px; right: -12px; bottom: -12px;
+            border: 1px solid var(--gold); border-radius: 50%; opacity: 0.4;
+        }
+        .img-redonda { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+
+        /* SECTION 4 - HISTORIA (BACKGROUND PNG) */
+        .historia {
+            padding: 120px 10%; color: white; text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover; background-attachment: fixed;
+        }
+
+        /* SECTION 5 - CONTATO (BACKGROUND CINZA) */
+        .contato { padding: 80px 10%; background-color: #eeeeee; text-align: center; }
+        .contact-card { max-width: 800px; margin: 0 auto; }
+        .contact-item { margin: 15px 0; font-size: 1.1rem; }
+        .whatsapp-btn {
+            display: inline-block; background-color: #25d366; color: white;
+            padding: 15px 35px; border-radius: 4px; text-decoration: none;
+            font-weight: bold; margin-top: 25px; text-transform: uppercase;
+        }
+
+        /* FOOTER */
+        footer { background-color: var(--black); color: white; text-align: center; padding: 40px 20px; }
+        .impact-phrase { font-style: italic; color: var(--gold); font-size: 1.2rem; margin-bottom: 20px; display: block; }
+        .copyright { font-size: 0.8rem; opacity: 0.7; letter-spacing: 1px; }
+
+        @media (max-width: 768px) {
+            nav ul { flex-direction: column; gap: 10px; }
+            .hero h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Matheus do Vale">
+        </div>
+        <h1>Matheus do Vale</h1>
+        <nav>
+            <ul>
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="https://wa.me/556492877772" target="_blank">WhatsApp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Defesa intransigente dos seus direitos com estratégia e integridade.</h2>
+    </section>
+
+    <div class="triple-divider">
+        <span></span>
+        <span style="width: 40%;"></span>
+        <span></span>
+    </div>
+
+    <section id="especialidades" class="modules">
+        <div class="card">
+            <i class="fas fa-gavel"></i>
+            <h3>Direito Civil</h3>
+            <p>Assessoria completa em contratos, responsabilidade civil, divórcios e inventários.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-home"></i>
+            <h3>Usucapião</h3>
+            <p>Regularização de imóveis urbanos e rurais com agilidade e segurança jurídica.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-hand-holding-usd"></i>
+            <h3>Cobrança e Pensão</h3>
+            <p>Execução de alimentos, revisão de valores e recuperação de créditos inadimplidos.</p>
+        </div>
+    </section>
+
+    <section id="quem-somos" class="quem-somos">
+        <h2 style="text-transform: uppercase; letter-spacing: 2px;">Quem Somos</h2>
+        <div class="profile-frame">
+            <img src="matheus.png" alt="Matheus do Vale" class="img-redonda">
+        </div>
+        <p style="max-width: 800px; margin: 0 auto;">O escritório Matheus do Vale Advogado é pautado pela ética e pela busca incansável pela justiça. Atuamos de forma personalizada para oferecer soluções jurídicas eficazes em momentos decisivos.</p>
+    </section>
+
+    <section id="historia" class="historia">
+        <h2 style="text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">Nossa História</h2>
+        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">Com anos de dedicação ao Direito Civil, nossa trajetória é marcada pela vitória de nossos clientes e pela consolidação de um atendimento humano e técnico, focado na resolução real de conflitos.</p>
+    </section>
+
+    <section id="contato" class="contato">
+        <div class="contact-card">
+            <h2 style="text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px;">Contato</h2>
+            <div class="contact-item"><i class="fas fa-map-marker-alt" style="color: var(--gold)"></i> Endereço Profissional, Rua Rui Barbosa Número 68- Centro - Pires do Rio - Goiás - Brasil.</div>
+            <div class="contact-item"><i class="fas fa-envelope" style="color: var(--gold)"></i> contato@matheusdovale.adv.br</div>
+            <div class="contact-item"><i class="fas fa-phone" style="color: var(--gold)"></i> (64) 9287-7772</div>
+            <a href="https://wa.me/556492877772" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Falar com o Especialista
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <span class="impact-phrase">"A justiça consiste em dar a cada um o que é seu."</span>
+        <p class="copyright">Direitos Reservados &copy; 2026 | Matheus do Vale Advogado</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
